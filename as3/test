@@ -1,0 +1,105 @@
+#!/bin/bash
+make clean
+make all
+
+./opt -u algred.i
+./opt -v algred.i
+./opt -u -v algred.i
+./opt -v -u algred.i
+
+./sim opt_u_algred.i << EOF
+50
+EOF
+./sim opt_v_algred.i << EOF
+50
+EOF
+./sim opt_v_u_algred.i << EOF
+50
+EOF
+./sim opt_u_v_algred.i << EOF
+50
+EOF
+
+./opt -u bsort.i
+./opt -v bsort.i
+./opt -u -v bsort.i
+./opt -v -u bsort.i
+
+./sim opt_u_bsort.i -d bsort2.d
+./sim opt_v_bsort.i -d bsort2.d
+./sim opt_v_u_bsort.i -d bsort2.d
+./sim opt_u_v_bsort.i -d bsort2.d
+
+./opt -u fib.i
+./opt -v fib.i
+./opt -u -v fib.i
+./opt -v -u fib.i
+
+./sim opt_u_fib.i << EOF
+20
+EOF
+./sim opt_v_fib.i << EOF
+20
+EOF
+./sim opt_v_u_fib.i << EOF
+20
+EOF
+./sim opt_u_v_fib.i << EOF
+20
+EOF
+
+./opt -u mmult.i
+./opt -v mmult.i
+./opt -u -v mmult.i
+./opt -v -u mmult.i
+
+./sim opt_u_mmult.i << EOF
+50
+EOF
+./sim opt_v_mmult.i << EOF
+50
+EOF
+./sim opt_v_u_mmult.i << EOF
+50
+EOF
+./sim opt_u_v_mmult.i << EOF
+50
+EOF
+
+./opt -u oneloop.i
+./opt -v oneloop.i
+./opt -u -v oneloop.i
+./opt -v -u oneloop.i
+
+./sim opt_u_oneloop.i << EOF
+50
+EOF
+./sim opt_v_oneloop.i << EOF
+50
+EOF
+./sim opt_v_u_oneloop.i << EOF
+50
+EOF
+./sim opt_u_v_oneloop.i << EOF
+50
+EOF
+
+./opt -u qsort.i
+./opt -v qsort.i
+./opt -u -v qsort.i
+./opt -v -u qsort.i
+
+./sim opt_u_qsort.i -d qsort2.d
+./sim opt_v_qsort.i -d qsort2.d
+./sim opt_v_u_qsort.i -d qsort2.d
+./sim opt_u_v_qsort.i -d qsort2.d
+
+./opt -u sumred.i
+./opt -v sumred.i
+./opt -u -v sumred.i
+./opt -v -u sumred.i
+
+./sim opt_u_sumred.i -d sumred1.d
+./sim opt_v_sumred.i -d sumred1.d
+./sim opt_v_u_sumred.i -d sumred1.d
+./sim opt_u_v_sumred.i -d sumred1.d

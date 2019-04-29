@@ -1,0 +1,16 @@
+# Rice COMP506 Lab3 ILOC Optimization
+
+## Build Guide
+
+make:
+  build optimizer ./opt
+
+make clean:
+  remove useless files
+
+make test:
+  build optimizer, optimize all test files then run those programs
+
+## Optimizer Usage:
+
+./opt [-h] [-u] [-v] [filename]
